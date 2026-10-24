@@ -1,12 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Zip Puzzle Solution Overlay",
-  "version": "1.0.0",
-  "description": "Solves the LinkedIn Zip puzzle and draws the solution path as an overlay above the board.",
+  "name": "LinkedIn Games Solution Overlay (Unofficial)",
+  "version": "1.2.0",
+  "description": "Unofficial. Solves Zip, Queens, Tango and Mini Sudoku locally and shows the solution as an overlay on the board.",
   "content_scripts": [
     {
       "matches": ["https://www.linkedin.com/*"],
-      "js": ["content.js"],
+      "js": [
+        "src/common.js",
+        "src/zip.js",
+        "src/queens.js",
+        "src/tango.js",
+        "src/sudoku.js",
+        "src/main.js"
+      ],
       "run_at": "document_idle",
       "all_frames": true
     }
