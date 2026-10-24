@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Zip Puzzle Solution Overlay",
+  "version": "1.0.0",
+  "description": "Solves the LinkedIn Zip puzzle and draws the solution path as an overlay above the board.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
